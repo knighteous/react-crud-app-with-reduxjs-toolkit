@@ -34,7 +34,7 @@ function Employee() {
 
     //         dispatch(onLoadSuccess(data))
     //     } catch (error) {
-    //         console.table(error)
+    //         console.table([error])
     //     }
     // }
 
@@ -59,7 +59,7 @@ function Employee() {
         //     onCloseModal()
         //     onLoad()
         // } catch (error) {
-        //     console.table(error)
+        //     console.table([error])
         // }
 
         dispatch(onAddThunk({empObj}))
@@ -89,7 +89,7 @@ function Employee() {
         //     onCloseModal()
         //     onLoad()
         // } catch (error) {
-        //     console.table(error)
+        //     console.table([error])
         // }
 
         dispatch(onUpdateThunk({empObj, empid}))
@@ -108,7 +108,7 @@ function Employee() {
         //     onResetForm()
         //     onLoad()
         // } catch (error) {
-        //     console.table(error)
+        //     console.table([error])
         // }
 
         dispatch(onDeleteThunk({empid}))
