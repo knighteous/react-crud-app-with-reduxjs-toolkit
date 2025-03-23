@@ -169,7 +169,7 @@ function Employee() {
                             </tr>
                         )) : (
                             <tr className='text-center'>
-                                <td colspan=7>No records to display</td>
+                                <td colSpan={7}>No records to display</td>
                             </tr>
                         )
                     }
