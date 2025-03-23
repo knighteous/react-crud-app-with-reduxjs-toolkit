@@ -104,6 +104,7 @@ export const onLoadThunk = createAsyncThunk(
             return data
         } catch (error) {
             rejectWithValue(error)
+            // console.table(error)
         }
     }
 )
@@ -116,6 +117,7 @@ export const onAddThunk = createAsyncThunk(
             return data
         } catch (error) {
             rejectWithValue(error)
+            // console.table(error)
         }
     }
 )
@@ -128,6 +130,7 @@ export const onUpdateThunk = createAsyncThunk(
             return data
         } catch (error) {
             rejectWithValue(error)
+            // console.table(error)
         }
     }
 )
@@ -140,6 +143,7 @@ export const onDeleteThunk = createAsyncThunk(
             return data
         } catch (error) {
             rejectWithValue(error)
+            // console.table(error)
         }
     }
 )
