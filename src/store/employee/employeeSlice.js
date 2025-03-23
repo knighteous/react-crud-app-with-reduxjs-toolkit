@@ -8,54 +8,6 @@ const initialState = {
     employeeEdit: {}
 }
 
-export const onLoadThunk = createAsyncThunk(
-    'employee/onLoadThunk',
-    async (args, {rejectWithValue}) => {
-        try {
-            const {data} = await axios.get('http://localhost:5400/employees')
-            return data
-        } catch (error) {
-            rejectWithValue(error)
-        }
-    }
-)
-
-export const onAddThunk = createAsyncThunk(
-    'employee/onAddThunk',
-    async ({empObj}, {rejectWithValue}) => {
-        try {
-            const {data} = await axios.post(`http://localhost:5400/employees`, empObj)
-            return data
-        } catch (error) {
-            rejectWithValue(error)
-        }
-    }
-)
-
-export const onUpdateThunk = createAsyncThunk(
-    'employee/onUpdateThunk',
-    async ({empObj, empid}, {rejectWithValue}) => {
-        try {
-            const {data} = await axios.put(`http://localhost:5400/employees/${empid}`, empObj)
-            return data
-        } catch (error) {
-            rejectWithValue(error)
-        }
-    }
-)
-
-export const onDeleteThunk = createAsyncThunk(
-    'employee/onDeleteThunk',
-    async ({empid}, {rejectWithValue}) => {
-        try {
-            const {data} = await axios.delete(`http://localhost:5400/employees/${empid}`)
-            return data
-        } catch (error) {
-            rejectWithValue(error)
-        }
-    }
-)
-
 const employeeSlice = createSlice({
     name: 'employee',
     initialState,
@@ -143,5 +95,53 @@ const employeeSlice = createSlice({
 })
 
 // export const {onLoadSuccess, onAddSuccess, onUpdateSuccess, onDeleteSuccess} = employeeSlice.actions
+
+export const onLoadThunk = createAsyncThunk(
+    'employee/onLoadThunk',
+    async (args, {rejectWithValue}) => {
+        try {
+            const {data} = await axios.get('http://localhost:5400/employees')
+            return data
+        } catch (error) {
+            rejectWithValue(error)
+        }
+    }
+)
+
+export const onAddThunk = createAsyncThunk(
+    'employee/onAddThunk',
+    async ({empObj}, {rejectWithValue}) => {
+        try {
+            const {data} = await axios.post(`http://localhost:5400/employees`, empObj)
+            return data
+        } catch (error) {
+            rejectWithValue(error)
+        }
+    }
+)
+
+export const onUpdateThunk = createAsyncThunk(
+    'employee/onUpdateThunk',
+    async ({empObj, empid}, {rejectWithValue}) => {
+        try {
+            const {data} = await axios.put(`http://localhost:5400/employees/${empid}`, empObj)
+            return data
+        } catch (error) {
+            rejectWithValue(error)
+        }
+    }
+)
+
+export const onDeleteThunk = createAsyncThunk(
+    'employee/onDeleteThunk',
+    async ({empid}, {rejectWithValue}) => {
+        try {
+            const {data} = await axios.delete(`http://localhost:5400/employees/${empid}`)
+            return data
+        } catch (error) {
+            rejectWithValue(error)
+        }
+    }
+)
 
 export default employeeSlice.reducer
