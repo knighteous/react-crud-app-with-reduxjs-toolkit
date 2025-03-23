@@ -139,7 +139,7 @@ function Employee() {
 
     return (
         <div className="table-responsive">
-            <table className="table table-danger">
+            <table className="table table-info">
                 <thead>
                     <tr>
                         <th scope="col">id</th>
