@@ -167,7 +167,11 @@ function Employee() {
                                 <td>{employee.phone}</td>
                                 <td>{employee.email}</td>
                             </tr>
-                        )) : null
+                        )) : (
+                            <tr className='text-center'>
+                                <td colspan=7>No records to display</td>
+                            </tr>
+                        )
                     }
                 </tbody>
             </table>
